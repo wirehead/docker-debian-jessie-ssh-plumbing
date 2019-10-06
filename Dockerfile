@@ -2,7 +2,7 @@ FROM debian:stretch
 
 RUN apt-get update && \
 	apt-get upgrade -y && \
-	apt-get install -y --no-install-recommends openssh-client unzip curl wget git ca-certificates && \
+	apt-get install -y --no-install-recommends openssh-client autossh unzip curl wget git ca-certificates postgresql-client && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
